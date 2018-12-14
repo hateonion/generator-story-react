@@ -1,0 +1,5 @@
+---
+extends: "prettier"
+parseOptions:
+  ecmaVersion: 6,
+  sourceType: "module"
