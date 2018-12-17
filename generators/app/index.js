@@ -1,11 +1,28 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
-  method1() {
-    this.log('method 1 just ran');
+  constructor(args, opts) {
+    super(args, opts);
+    this.argument('componentName', { typs: String, required: true });
   }
 
-  method2() {
-    this.log('method 2 just ran');
+  writting() {
+    const componentName = this.options.componentName;
+    this.fs.copyTpl(
+      this.templatePath('index.js'),
+      this.destinationPath('index.js'),
+      { componentName }
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('index.scss'),
+      this.destinationPath(`${componentName}.scss`)
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('component.story.js'),
+      this.destinationPath(`${componentName}.story.js`),
+      { componentName }
+    );
   }
 };

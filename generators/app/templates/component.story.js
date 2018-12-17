@@ -1,0 +1,19 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+
+import {
+  <%= componentName %>
+} from 'JCL';
+
+storiesOf('ui/<%= componentName %>', module)
+  .add(
+    'description here',
+    withInfo(`
+        info here
+        `)(() => (
+          <div>
+          <<%= componentName %> />
+          </div>
+        ))
+  );
