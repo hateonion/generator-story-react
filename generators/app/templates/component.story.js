@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import {
   <%= componentName %>
-} from 'JCL';
+} from '<%= packageName %>';
 
 storiesOf('ui/<%= componentName %>', module)
   .add(
