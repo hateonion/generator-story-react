@@ -3,9 +3,7 @@ import React from 'react';
 import './<%= componentName %>.scss';
 
 function <%= componentName %>() {
-  return (
-
-  )
+  return ;
 }
 
 export default <%= componentName %>;
