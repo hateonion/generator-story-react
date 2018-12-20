@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '<%= componentName %>.scss';
+import './<%= componentName %>.scss';
 
 function <%= componentName %>() {
   return (
